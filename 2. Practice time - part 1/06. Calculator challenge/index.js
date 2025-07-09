@@ -10,24 +10,27 @@ let sumEl = document.getElementById("sum-el");
 // Perform the given calculation using num1 and num2
 
 function add() {
-  let totalAdd = num1 + num2;
-  console.log(totalAdd);
-  sumEl.textContent += totalAdd;
+  let result = num1 + num2;
+  // console.log(totalAdd);
+  sumEl.textContent = "Sum: " + result;
 }
 
 function sub() {
-  let totalSub = num1 - num2;
-  console.log(totalSub);
+  let result = num1 - num2;
+  // console.log(totalSub);
+  sumEl.textContent = "Sum: " + result;
 }
 
 function div() {
-  let totalDiv = num1 / num2;
-  console.log(totalDiv);
+  let result = num1 / num2;
+  // console.log(totalDiv);
+  sumEl.textContent = "Sum: " + result;
 }
 
 function multi() {
-  let totalMulti = num1 * num2;
-  console.log(totalMulti);
+  let result = num1 * num2;
+  // console.log(totalMulti);
+  sumEl.textContent = "Sum: " + result;
 }
 
 // Render the result of the calculation in the paragraph with id="sum-el"
