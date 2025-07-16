@@ -2,7 +2,9 @@ let myLeads = [];
 const inputEl = document.getElementById("input-el");
 const inputBtn = document.getElementById("input-btn");
 const ulEl = document.getElementById("ul-el");
+
 // 1. Store the delete button in a deleteBtn variable
+const deleteBtn = document.getElementById("delete-btn");
 const leadsFromLocalStorage = JSON.parse(localStorage.getItem("myLeads"));
 
 if (leadsFromLocalStorage) {
@@ -11,7 +13,14 @@ if (leadsFromLocalStorage) {
 }
 
 // 2. Listen for double clicks on the delete button (google it!)
+
+deleteBtn.addEventListener("dblclick", function () {
+  console.log("double clicked!");
+});
 // 3. When clicked, clear localStorage, myLeads, and the DOM
+localStorage.clear();
+myLeads = [];
+renderLeads();
 
 inputBtn.addEventListener("click", function () {
   myLeads.push(inputEl.value);
